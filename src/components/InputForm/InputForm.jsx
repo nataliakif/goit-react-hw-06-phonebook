@@ -1,15 +1,17 @@
 // import PropTypes from 'prop-types';
 import { useState } from 'react';
-import { connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import actions from 'redux/actions';
 import styles from './InputForm.module.css';
 
-function InputForm({ onSubmit }) {
+function InputForm() {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
-  // const [button, setButton] = useState('');
-
+  const dispatch = useDispatch();
+  const onSubmit = (name, number) => {
+    dispatch(actions.addContact(name, number));
+  };
   const handleInputChange = e => {
     const { name, value } = e.target;
     switch (name) {
@@ -69,9 +71,5 @@ function InputForm({ onSubmit }) {
     </form>
   );
 }
-const mapDispatchToProps = dispatch => ({
-  onSubmit: name => dispatch(actions.addContact(name)),
-  // onSubmit: number => dispatch(actions.addContact(number)),
-});
 
-export default connect(null, mapDispatchToProps)(InputForm);
+export default InputForm;
