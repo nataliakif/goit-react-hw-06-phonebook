@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { createReducer } from '@reduxjs/toolkit';
+import { createReducer, createSlice } from '@reduxjs/toolkit';
 
 const items = createReducer(
   [
@@ -17,8 +17,14 @@ const items = createReducer(
     // })
   }
 );
-const filter = createReducer('', {
-  'contacts/changeFilter': (_, { payload }) => payload,
+// const filter = createReducer('', {
+//   'contacts/changeFilter': (_, { payload }) => payload,
+// });
+const filter = createSlice({
+  name: 'filter',
+  initialState: '',
+  reducers: {
+    changeFilter: (_, { payload }) => payload,
+  },
 });
-
 export default combineReducers({ items, filter });
