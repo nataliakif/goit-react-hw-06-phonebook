@@ -1,0 +1,16 @@
+.InputForm {
+  width: 500px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+}
+.InputForm__label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.InputForm__input {
+  width: 200px;
+  margin-top: 5px;
+}

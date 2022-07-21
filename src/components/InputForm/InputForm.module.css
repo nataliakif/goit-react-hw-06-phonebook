@@ -1,0 +1,29 @@
+.InputForm {
+  margin-left: 0;
+  width: 500px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+}
+.InputForm__label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.InputForm__input {
+  width: 200px;
+  margin-top: 10px;
+}
+.InputForm__button {
+  width: 150px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: rgb(144, 92, 194);
+  color: #fff;
+  border-radius: 5px;
+}
+.InputForm__button:hover {
+  background-color: rgb(62, 39, 83);
+}

@@ -1,0 +1,27 @@
+.Contacts__list {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin-left: 0px;
+  list-style: none;
+}
+.Contacts__item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: rgb(31, 27, 34);
+}
+.Contacts__name {
+  font-weight: 700;
+}
+.Contacts__button {
+  width: 100px;
+  height: 40px;
+  color: #fff;
+  background-color: rgb(144, 92, 194);
+  font-weight: 700;
+  border-radius: 5px;
+}
+.Contacts__button:hover {
+  background-color: rgb(62, 39, 83);
+}

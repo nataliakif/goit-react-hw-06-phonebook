@@ -1,16 +1,23 @@
-export const App = () => {
+import Section from './Section/Section';
+import InputForm from './InputForm/InputForm';
+import Contacts from './Contacts/Contacts';
+import Filter from './Filter/Filter';
+
+function App() {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <Section title="PhoneBook">
+        <InputForm />
+      </Section>
+      <Section title="Contacts">
+        <Filter />
+        <Contacts
+        // contacts={filteredContacts()}
+        // onDeleteContact={deleteContact}
+        />
+      </Section>
+    </>
   );
-};
+}
+
+export default App;
